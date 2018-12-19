@@ -13,7 +13,21 @@
         <project.reporting.outputEncoding>UTF-8
         </project.reporting.outputEncoding>
     </properties>
+    <repositories>
+        <repository>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
 
+    </repositories>
     <dependencies>
 
         <dependency>
@@ -117,35 +131,4 @@
         </plugins>
     </build>
 
-    <repositories>
-        <repository>
-            <id>cdh.repo</id>
-            <url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
-            <name>Cloudera Repositories</name>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>cdh.snapshots.repo</id>
-            <url>https://repository.cloudera.com/artifactory/libs-snapshot-local</url>
-            <name>Cloudera Snapshots Repository</name>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>central</id>
-            <url>http://repo1.maven.org/maven2/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 </project>
